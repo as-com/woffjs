@@ -1,4 +1,16 @@
-!function(){
+!function(Modernizr){
+	// We use a lot of modern web tech. Screw IE.
+	if (!(Modernizr.blobconstructor && 
+		Modernizr.bloburls && 
+		Modernizr.fileinput && 
+		Modernizr.filereader && 
+		Modernizr.transferables && 
+		Modernizr.typedarrays && 
+		Modernizr.webworkers)) {
+		alert("Tests failed");
+		return;
+	}
+
 	var sfnt2woff = new Worker("sfnt2woff.min.js");
 	//sfnt2woff = new Worker("sfnt2woff.js"); // dev version
 	// woff2sfnt = new Worker("woff2sfnt.js");
@@ -55,4 +67,4 @@
 	$.get("sfnt2woff.js.mem", function(data) {
 		console.log("Preloaded sfnt2woff memory file");
 	});
-}();
+}(Modernizr);
