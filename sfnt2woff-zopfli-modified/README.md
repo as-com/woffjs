@@ -1,3 +1,4 @@
+Source: https://github.com/bramstein/sfnt2woff-zopfli
 # Create WOFF files with Zopfli compression
 
 This is a modified version of the [sfnt2woff utility](https://people.mozilla.org/~jkew/woff/) that uses Zopfli as a compression algorithm instead of zlib. This results in compression gains of — on average — 5-8% compared to regular WOFF files. Zopfli generates compressed output that is compatible with regular zlib compression so the resulting WOFF files can be used everywhere.
