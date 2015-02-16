@@ -52,7 +52,7 @@
 	    }
 	});
 
-	$.get("/sfnt2woff.js.mem", function(data) {
+	$.get("sfnt2woff.js.mem", function(data) {
 		console.log("Preloaded sfnt2woff memory file");
 	});
 }();
