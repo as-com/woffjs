@@ -1,0 +1,6 @@
+[submodule "woff2otf"]
+	path = woff2otf
+	url = https://github.com/arty-name/woff2otf.git
+[submodule "zopfli-for-emscripten"]
+	path = zopfli-for-emscripten
+	url = https://github.com/imaya/zopfli-for-emscripten.git
