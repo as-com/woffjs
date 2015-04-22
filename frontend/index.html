@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<title>WOFFer</title>
-	<script src="modernizr-custom.min.js"></script>
+	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-<input type="file" name="file" id="fileInput">
-<input type="button" value="Submit" id="fileSubmit">
+	
+	<input type="file" name="file" id="fileInput" multiple>
 
-<script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Filename</th>
+				<th>Status</th>
+				<th>Download</th>
+			</tr>
+		</thead>
+		<tbody class="files" id="files">
+			<tr>
+				<td class="filename"></td>
+				<td class="status"></td>
+				<td><a class="btn btn-b btn-sm btn-download" data-disabled="true">Download file</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<script src="lib/zepto.min.js"></script>
+<script>window.jQuery=Zepto;</script>
+<script src="lib/transparency.min.js"></script>
+<script src="lib/workcrew.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
