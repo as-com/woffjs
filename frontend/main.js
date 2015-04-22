@@ -68,7 +68,7 @@
 				return String(this.status != 0 || this.status == 3);
 			},
 			download: function() {
-				return (this.file.substr(0, this.file.lastIndexOf('.')) || this.file) + "." + this.type;
+				return (this.file.substr(0, this.file.lastIndexOf('.')) || this.file) + "." + this.type.toLowerCase();
 			}
 		}
 	};
