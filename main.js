@@ -155,10 +155,10 @@
 				var data = new Uint8Array(result.result.data.data);
 				if (data[0] == 0x00 && data[1] == 0x01 && data[2] == 0x00 && data[3] == 0x00 && data[4] == 0x00) {
 					// It's a TTF!
-					files[result.id].type = "ttf";
+					files[result.id].type = "TTF";
 				} else {
 					// It's probably an OTF!
-					files[result.id].type = "otf";
+					files[result.id].type = "OTF";
 				}
 			}
 
