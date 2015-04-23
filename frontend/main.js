@@ -1,5 +1,5 @@
 ! function() {
-	var workers = new WorkCrew("worker-bundle.min.js", navigator.hardwareConcurrency || 4);
+	var workers = new WorkCrew("//as-com.github.io/woffjs/worker-bundle.min.js", navigator.hardwareConcurrency || 4);
 
 	var tableDirective = {
 		filename: {
