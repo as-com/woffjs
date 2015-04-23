@@ -22,7 +22,7 @@
 							content: {
 								text: "<pre>" + this.errorMessage + "</pre> In other words, you probably didn't select a vaild " + (this.type == "WOFF" ? "TTF or OTF" : "WOFF") + " file.",
 								title: "Program Output"
-							},						
+							},
 							hide: {
 								fixed: true,
 								delay: 300
@@ -43,7 +43,7 @@
 							content: {
 								text: "<pre>" + this.errorMessage + "</pre>",
 								title: "Program Output"
-							},						
+							},
 							hide: {
 								fixed: true,
 								delay: 300
@@ -78,10 +78,17 @@
 		e.stopPropagation();
 		e.preventDefault();
 		e.dataTransfer.dropEffect = 'copy';
+		$(this).addClass("hover");
+	});
+	dropZone.addEventListener('dragleave', function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		$(this).removeClass("hover");
 	});
 	dropZone.addEventListener('drop', function(e) {
 		e.stopPropagation();
 		e.preventDefault();
+		$(this).removeClass("hover");
 		var files = e.dataTransfer.files;
 		$("#fileInput")[0].files = files;
 	});
@@ -199,6 +206,18 @@
 					};
 					xhr.send();
 				}((files[i].file.substr(0, files[i].file.lastIndexOf('.')) || files[i].file) + "." + files[i].type, files[i].download);
+			}
+		}
+	});
+	$('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top
+				}, 1000);
+				return false;
 			}
 		}
 	});
