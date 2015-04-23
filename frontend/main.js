@@ -222,33 +222,3 @@
 		}
 	});
 }();
-
-// sfnt2woff.addEventListener('message', function(e) {
-// 	alert(e.data.stderr);
-// 	var blob = new Blob([e.data.data], {
-// 		type: 'application/font-woff'
-// 	});
-// 	var url = URL.createObjectURL(new Blob([e.data.data], {
-// 		type: 'application/font-woff'
-// 	}));
-
-// 	document.write("<a href='" + url + "' download='" + e.data.name + ".woff'>download</a>");
-// });
-
-// woff2sfnt.addEventListener('message', function(e) {
-// 	alert(e.data.error);
-// 	var data = new Uint8Array(e.data.data);
-// 	var blob = new Blob([e.data.data], {
-// 		type: 'application/font-woff'
-// 	});
-// 	var url = URL.createObjectURL(blob);
-
-// 	// Detect TTF with magic numbers
-// 	if (data[0] == 0x00 && data[1] == 0x01 && data[2] == 0x00 && data[3] == 0x00 && data[4] == 0x00) {
-// 		// It's a TTF!
-// 		document.write("<a href='" + url + "' download='" + e.data.name + ".ttf'>download</a>");
-// 	} else {
-// 		// It's probably an OTF!
-// 		document.write("<a href='" + url + "' download='" + e.data.name + ".otf'>download</a>");
-// 	}
-// });
