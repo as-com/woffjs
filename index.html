@@ -8,22 +8,7 @@
 	<base target="_top">
 </head>
 <body>
-<!--<nav class="nav" tabindex="-1" onclick="this.focus()">-->
-<!--    <div class="container">-->
-<!--    	<a class="pagename current" href="#"></a>-->
-<!--        <a href="#converter">Converter</a>-->
-<!--        <a href="#howto">How To Use</a> -->
-<!--        <a href="#about">About</a>-->
-<!--        <a href="//andrewsun.com/projects/woffjs" target="_top" style="float:right">WOFFjs</a>-->
-<!--        <a href="//andrewsun.com/" target="_top" style="float:right">Back to Andrew Sun.com</a>-->
-<!--    </div>-->
-<!--</nav>-->
-<!--<button class="btn-close btn btn-sm">×</button>-->
-<!--<br>-->
 	<div class="container" data-iframe-height>
-
-		<!--<h1 id="converter">WOFFer <small>- WOFF font converter</small></h1>-->
-		<p>This handy tool converts TTF or OTF fonts to <a href="http://www.w3.org/TR/WOFF/">WOFF</a> format, or from WOFF format back to the original format.</p>
 		<input type="file" name="file" id="fileInput" multiple>
 		<div id="dropZone">
 			<div id="dropZoneInner">
@@ -54,23 +39,7 @@
 		</table>
 		<br>
 		<button class="btn btn-a btn-sm smooth" id="zipdownload"><i class="icon-download-all"></i> Download all as zip</button>
-		<p>Note: This app uses cutting-edge web technologies. If it behaves strangely, please switch to the latest version of Chrome or Firefox.</p>
-		<h2 id="howto">How To Use</h1>
-		<ol>
-			<li>Drag and drop WOFF, TTF, or OTF fonts into the box at the top of the page, or click the Choose Files button.</li>
-			<li>Be patient, especially when converting TTF or OTF to WOFF. (See below for why)</li>
-			<li>Download your converted files, either individually or in one zip file.</li>
-		</ol>
-
-		<h2 id="about">About</h2>
-		<p>The WOFFer is a tool to convert TTF or OTF to WOFF or WOFF back to TTF or OTF. WOFF, short for Web Open Font Format, is a special font format that is compressed and optimized for use on the web.</p>
-		<p>This tool is powered by <a href="//andrewsun.com/projects/woffjs">WOFFjs</a>, a JavaScript implementation of an encoder and decoder for WOFF fonts. Your fonts are not sent to any server. Instead, they processed <strong>entirely inside your browser.</strong> You don't need to worry about crashing my server.</p>
-		<p>Conversion to the WOFF format with this tool may be slow, because it uses Google's Zopfli algorithm to compress the font data, yielding smaller files but a much longer conversion time.</p>
 	</div>
-
-	<!--<div class="footer">-->
-	<!--	Made with love by <a href="//andrewsun.com/">Andrew Sun</a>.-->
-	<!--</div>-->
 
 
 	<script src="//cdn.jsdelivr.net/g/jquery@2.1.3,jszip@2.5.0,filesaver.js@0.2,qtip2@2.2.1"></script>
